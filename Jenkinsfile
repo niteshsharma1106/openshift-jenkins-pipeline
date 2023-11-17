@@ -1,7 +1,7 @@
 application = "hello-nodejs"
-project = "vchari-sandbox"
+project = "summer69"
 
-openshiftApiURL = "https://api.starter-us-west-2.openshift.com"
+openshiftApiURL = "https://api.n1ocp-pclus-05.india.airtel.itm"
 openshiftAuthToken = null
 
 contextDir = "/"
@@ -10,7 +10,7 @@ gitURL = "https://github.com/vidhyachari/openshift-jenkins-pipeline"
 openshiftTemplatePath = "openshift-templates/nodejs.json"
 
 
-node('nodejs'){
+node('n1ocp-pclus-05-slave'){
 
    getJenkinsSACredentials()
     
