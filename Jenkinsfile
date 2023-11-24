@@ -16,7 +16,7 @@ node('n1ocp-pclus-05-slave'){
     
     sh """
         set +x
-        oc login --token=${openshiftAuthToken} ${openshiftApiURL} >/dev/null 2>&1 || echo 'OpenShift login failed'
+        oc login --token=${openshiftAuthToken} ${openshiftApiURL} --insecure-skip-tls-verify=True>/dev/null 2>&1 || echo 'OpenShift login failed'
     """
     
     //git changelog: false, poll: false, url: 'https://github.com/vidhyachari/openshift-hello-nodejs'
