@@ -15,8 +15,8 @@ node('n1ocp-pclus-05-slave'){
    getJenkinsSACredentials()
     
     sh """
-        set +x
-        oc login --token=${openshiftAuthToken} ${openshiftApiURL} --insecure-skip-tls-verify=True || echo 'OpenShift login failed'
+        oc login --token=${openshiftAuthToken} ${openshiftApiURL} --insecure-skip-tls-verify=True
+        oc get pod
     """
     
     //git changelog: false, poll: false, url: 'https://github.com/vidhyachari/openshift-hello-nodejs'
