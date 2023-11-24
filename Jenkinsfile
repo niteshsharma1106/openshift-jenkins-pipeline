@@ -52,11 +52,10 @@ node('n1ocp-pclus-05-slave'){
 }//node
 
 def getJenkinsSACredentials(){
-
   withCredentials([[$class: 'StringBinding',
     credentialsId: 'n1ocp-pclus-05',
-    variable: 'authToken']]) {
-    openshiftAuthToken = authToken
+    variable: 'SECRET']]) {
+    openshiftAuthToken = SECRET
   }
 
 }
