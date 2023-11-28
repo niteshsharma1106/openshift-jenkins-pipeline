@@ -12,13 +12,13 @@ openshiftTemplatePath = "openshift-templates/nodejs.json"
 
 node('n1ocp-pclus-05-slave'){
 
-   getJenkinsSACredentials()
+   getJenkinsSACredentials(){
     
     sh """
         oc login --token=${openshiftAuthToken} ${openshiftApiURL} --insecure-skip-tls-verify=True
         oc get pod
     """
-    
+   }
     //git changelog: false, poll: false, url: 'https://github.com/vidhyachari/openshift-hello-nodejs'
     // Checkout the source code
     checkout scm
