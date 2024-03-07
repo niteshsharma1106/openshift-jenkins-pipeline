@@ -17,6 +17,7 @@ node('n1ocp-pclus-05-slave'){
     sh """
         oc login --token=${openshiftAuthToken} ${openshiftApiURL} --insecure-skip-tls-verify=True
         oc get pod
+        oc get svc
     """
    }
     //git changelog: false, poll: false, url: 'https://github.com/vidhyachari/openshift-hello-nodejs'
